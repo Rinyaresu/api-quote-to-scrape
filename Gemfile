@@ -40,3 +40,5 @@ group :development do
   # gem "spring"
 end
 
+# Mongoid is an ODM (Object Document Mapper) Framework for MongoDB, written in Ruby.
+gem 'mongoid'
