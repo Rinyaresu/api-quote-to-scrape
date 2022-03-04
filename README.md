@@ -1,24 +1,33 @@
-# README
+# Teste para vaga Backend - Inovamind
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## **Desafio:**
 
-Things you may want to cover:
+Crie um web crawler para efetuar uma busca de frases no site <http://quotes.toscrape.com/>. As infomações vindas do crawler devem ser disponibilizadas por uma API. Esta API deve receber como parâmetro uma tag e buscar por frases que estejam classificadas de acordo com esta tag. As informações extraidas do site devem ser salvas no MongoDB que simulará um cache, onde caso a tag já tenha sido pesquisada, deverá retornar os dados persistidos previamente no banco de dados.
 
-* Ruby version
+Ferramentas utilizadas:
 
-* System dependencies
+* Ruby: 3.1.0
 
-* Configuration
+* Rails: 7.0.2
 
-* Database creation
+* Mongoid: 7.3.4
 
-* Database initialization
+```ruby
+gem 'mongoid' or gem install mongoid
+```
 
-* How to run the test suite
+</br>
 
-* Services (job queues, cache servers, search engines, etc.)
+Endpoints:
 
-* Deployment instructions
+* Buscar os quotes por tags:
 
-* ...
+```
+GET api/v1/quotes/:search_tag
+```
+
+* Buscar todos os quotes:
+
+```
+GET api/v1/quotes
+```
