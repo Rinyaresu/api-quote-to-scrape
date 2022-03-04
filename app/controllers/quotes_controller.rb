@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class QuotesController < ApplicationController
   def index
     unless Quote.tags_exists?(params[:search_tag]).any?
@@ -5,7 +7,8 @@ class QuotesController < ApplicationController
       scrape_quotes = CrawlerService.new(params[:search_tag]).perform
 
       scrape_quotes.each do |scrape|
-        Quote.find_or_create_by!(quote: scrape[:quote], author: scrape[:author], author_about: scrape[:author_about], tags: scrape[:tags])
+        Quote.find_or_create_by!(quote: scrape[:quote], author: scrape[:author], author_about: scrape[:author_about],
+                                 tags: scrape[:tags])
       end
 
     end
