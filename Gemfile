@@ -42,3 +42,9 @@ end
 
 # Mongoid is an ODM (Object Document Mapper) Framework for MongoDB, written in Ruby.
 gem 'mongoid'
+
+# Nokogiri (鋸) makes it easy and painless to work with XML and HTML from Ruby.
+gem 'nokogiri'
+
+# OpenURI is an easy-to-use wrapper for Net::HTTP, Net::HTTPS and Net::FTP.
+gem 'open-uri'
